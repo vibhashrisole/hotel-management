@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, NgForm, Validators } from '@angular/forms';
-import { CustomerRegistration } from 'C:/Users/PEC/Documents/Angular/Hotel-Management-app/src/app/shared/class/customer-registration';
 
 @Component({
   selector: 'app-root',
