@@ -2,4 +2,4 @@ First demo file with some changes.
 Gopal Punvantwar
 Shraddha Suruse
 Tejas Kale
-Rasika Dhole --- Hello Everyone
+Rasika Dhole
