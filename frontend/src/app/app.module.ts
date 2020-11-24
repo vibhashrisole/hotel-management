@@ -5,10 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomerRegistrationformComponent } from './customer-registrationform/customer-registrationform.component';
+import { RawMaterialComponent } from './raw-material/raw-material.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomerRegistrationformComponent,
+    RawMaterialComponent
   ],
   imports: [
     BrowserModule,

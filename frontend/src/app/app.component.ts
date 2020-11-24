@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, NgForm, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -8,26 +8,5 @@ import { FormGroup, FormControl, NgForm, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Hotel-Management-app';
-  registrationForm = new FormGroup({
-    fullname: new FormControl('', Validators.required),
-    address: new FormControl('', Validators.required),
-    contactno: new FormControl('', Validators.required),
-    emailid: new FormControl('', Validators.required)
-  });
-
-  show = true;
-
-  /*constructor(private http: HttpClient){
-    setTimeout(() => {
-      this.show = false;
-    }, 2000);
-  }*/
-
-  onSubmit(): void {
-    debugger;
-  }
-
-  onReset(): void {
-    debugger;
-  }
+  
 }
