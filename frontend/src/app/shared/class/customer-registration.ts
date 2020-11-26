@@ -14,35 +14,35 @@ export class CustomerRegistration {
     this.emailid = emailid;
   }
 
-  set Name(Name: string) {
+  set setName(Name: string) {
     this.name = Name;
   }
 
-  get Name(): string {
+  get getName(): string {
     return this.name;
   }
 
-  set Address(address: string) {
+  set setAddress(address: string) {
     this.adrs = address;
   }
 
-  get Address(): string {
+  get getAddress(): string {
     return this.adrs;
   }
 
-  set Contactno(contact: number) {
+  set setContactno(contact: number) {
     this.contactno = contact;
   }
 
-  get Contactno(): number {
+  get getContactno(): number {
     return this.contactno;
   }
 
-  set Emailid(email: string) {
+  set setEmailid(email: string) {
     this.emailid = email;
   }
 
-  get Emailid(): string {
+  get getEmailid(): string {
     return this.emailid;
   }
 

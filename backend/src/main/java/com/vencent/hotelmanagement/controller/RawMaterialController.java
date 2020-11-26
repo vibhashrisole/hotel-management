@@ -16,7 +16,7 @@ import com.vencent.hotelmanagement.entity.RawMaterial;
 import com.vencent.hotelmanagement.service.RawMaterialService;
 
 // This file consist of all the rest api end points
-@RequestMapping("/raw-material")
+@RequestMapping("/app-raw-material/raw-material")
 @RestController
 public class RawMaterialController {
 	
@@ -28,7 +28,7 @@ public class RawMaterialController {
 		return service.saveMaterial(v);
 	}
 	
-	@PostMapping("/addall")
+	@PostMapping("addall")
 	public List<RawMaterial> addMaterials(@RequestBody  List<RawMaterial> vs) {
 		return service.saveMaterials(vs);
 	}
@@ -38,12 +38,12 @@ public class RawMaterialController {
 		return service.getMaterial();
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("{id}")
 	public RawMaterial findMaterialById(@PathVariable int id) {
 		return service.getMaterialById(id);	
 	}
 	
-	@GetMapping("/{name}")
+	@GetMapping("{name}")
 	public RawMaterial findMaterialByName(@PathVariable String name) {
 		return service.getMaterialByName(name);	
 	}
@@ -53,12 +53,12 @@ public class RawMaterialController {
 		return service.updateMaterial(v);
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("delete/{id}")
 	public String deleteMaterial(@PathVariable int id) {
 		return service.deleteMaterial(id);
 	}
 	
-	@DeleteMapping("/deleteName/{name}")
+	@DeleteMapping("/app-raw-material/deleteName/{name}")
 	public String deleteMaterial(@PathVariable String name) {
 		return service.deleteMaterialByName(name);
 	}
