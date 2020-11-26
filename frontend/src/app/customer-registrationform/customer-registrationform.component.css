@@ -1,0 +1,29 @@
+.customer-registration-form {
+    padding: 20px;
+    border: 2px ridge black;
+    border-radius: 20px;
+    height: 600px;
+    width: 500px;
+}
+
+.form-input-row {
+    padding: 10px;
+    display: inline;
+}
+
+.form-input-cols label, input,textarea{
+    margin: 10px;
+    padding: 10px;
+}
+
+label {
+    float: left;
+    width: 200px;
+    padding: 10px;
+}
+
+.btn-parent button{
+    padding: 10px;
+    margin: 10px;
+    margin-left: 100px;
+}

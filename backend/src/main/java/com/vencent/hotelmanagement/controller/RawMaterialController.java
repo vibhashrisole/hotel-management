@@ -16,7 +16,7 @@ import com.vencent.hotelmanagement.entity.RawMaterial;
 import com.vencent.hotelmanagement.service.RawMaterialService;
 
 // This file consist of all the rest api end points
-@RequestMapping("/raw-material")
+@RequestMapping("/app-raw-material/raw-material")
 @RestController
 public class RawMaterialController {
 	
