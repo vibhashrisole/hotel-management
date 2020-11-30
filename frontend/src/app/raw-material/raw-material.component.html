@@ -1,0 +1,61 @@
+<div class="base-container">
+    <h2 style="text-align: center;">Manage Raw Materials</h2>
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-6">
+          <h3>Raw Materials Information</h3>
+          <form #rawMaterialForm="ngForm" (ngSubmit)="onAddData(rawMaterialForm.value)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" type="text" id="name" name="name" placeholder="Enter Name"
+                [(ngModel)]="rawMaterials.name" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input class="form-control" type="number" id="price" name="price" placeholder="Enter Price"
+                [(ngModel)]="rawMaterials.price" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input class="form-control" type="number" id="quantity" name="quantity" placeholder="Enter Quantity"
+                [(ngModel)]="rawMaterials.quantity" required>
+            </div>
+  
+            <button type="submit" class="btn btn-primary mr-2">{{ editMode? 'Update Data' : 'Add Data' }}</button>
+  
+          </form>
+        </div>
+  
+        <div class="col-md-6">
+          <h3> Raw Materials Details</h3>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Material of Materials; index as i">
+                <td>{{ Material.name }}</td>
+                <td>{{ Material.price }}</td>
+                <td>{{ Material.quantity }}</td>
+                <td><a class="text-danger" (click)="onEditData(Material.id, i)"><i class="fa fa-edit"></i></a></td>
+                <td><a class="text-danger" (click)="onDeleteData(Material.id)"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+  
+    </div>
+  </div>
