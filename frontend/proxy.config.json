@@ -1,5 +1,5 @@
 {
-    "/app-raw-material/*": {
+    "/app-hotel-management/*": {
         "target": "http://localhost:8080",
         "loglevel": "debug"
     }

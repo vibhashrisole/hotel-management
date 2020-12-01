@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerRegistrationformComponent } from './customer-registrationform/customer-registrationform.component';
 import { RawMaterialComponent } from './raw-material/raw-material.component';
+import { DepartmentComponent } from './department/department.component';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerRegistrationformComponent,
-    RawMaterialComponent
+    RawMaterialComponent,
+    DepartmentComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,
