@@ -1,0 +1,49 @@
+<div class="base-container">
+    <h2 style="text-align: center;">Manage Role</h2>
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-6">
+          <h3>Role Information</h3>
+          <form #roleForm="ngForm" (ngSubmit)="onAddData(roleForm.value); roleForm.reset()">
+
+            <div class="form-group">
+              <label for="role_name">Name</label>
+              <input class="form-control" type="text" id="role_name" name="role_name" placeholder="Enter Name"
+                [(ngModel)]="role.role_name" required>
+            </div>
+  
+            <button type="submit" class="btn btn-primary mr-2">{{ editMode? 'Update Data' : 'Add Data' }}</button>
+  
+          </form>
+        </div>
+  
+        <div class="col-md-6">
+          <h3> Role Details</h3>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let role of Roles; index as i">
+                <td>{{ role.role_id }}</td>
+                <td>{{ role.role_name}}</td>
+                <td><a class="text-danger" (click)="onEditData(role.role_id, i)"><i class="fa fa-edit"></i></a></td>
+                <td><a class="text-danger" (click)="onDeleteData(role.role_id)"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+  
+    </div>
+  </div>
