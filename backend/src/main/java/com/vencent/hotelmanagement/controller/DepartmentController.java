@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vencent.hotelmanagement.service.DepartmentService;
 import com.vencent.hotelmanagement.entity.Department;
 
-@RequestMapping("/department")
+@RequestMapping("/app-hotel-management/department")
 @RestController
 public class DepartmentController {
 
