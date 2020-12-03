@@ -29,7 +29,7 @@ show = true;
   onAddData(rawMaterialData: RawMaterials): void {
     if (this.editMode){
      this.rawMaterialForm.value.id = this.editUserId;
-     this.http.put('/app-raw-material/raw-material', rawMaterialData)
+     this.http.put('/app-hotel-management/raw-material', rawMaterialData)
      .subscribe(
      (res) => {
       console.log(res);
@@ -47,7 +47,7 @@ show = true;
     else{
       console.log(rawMaterialData);
       this.Materials.push(rawMaterialData);
-      this.http.post('/app-raw-material/raw-material', rawMaterialData)
+      this.http.post('/app-hotel-management/raw-material', rawMaterialData)
       .subscribe(
       (res) => {
         console.log(res);
@@ -65,7 +65,7 @@ show = true;
   }
 
   fetchData(): void {
-    this.http.get('/app-raw-material/raw-material')
+    this.http.get('/app-hotel-management/raw-material')
     .pipe(map(resData => {
       console.log(resData);
       const userArray = [];
@@ -109,7 +109,7 @@ show = true;
   onDeleteData(id): void {
     if (confirm('Do you want to delete this data')){
       console.log(id);
-      this.http.delete('/app-raw-material/raw-material/delete/' + id)
+      this.http.delete('/app-hotel-management/raw-material/delete/' + id)
       .subscribe(
         (res) => {
           console.log(res);
