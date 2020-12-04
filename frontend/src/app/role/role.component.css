@@ -1,0 +1,41 @@
+.base-container{
+    padding: 20px;
+    margin: 10px;
+    border: 10px ridge white;
+    background-color: silver;
+    width: 900px;
+    height: 900px;
+}
+
+.container{
+    border-top: 5px groove gray;
+}
+
+h2{
+    color:green;
+}
+
+.form-group label, input{
+    padding: 10px;
+    margin: 10px;
+    
+}
+ 
+button {
+    padding: 10px;
+    margin: 30px;
+}
+
+.row {
+    padding: 10px;
+}
+
+.thead-dark th{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px; 
+}
+
+td{
+    text-align: center;
+}

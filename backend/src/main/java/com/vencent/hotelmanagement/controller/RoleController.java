@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RequestMapping("/role")
+@RequestMapping("/app-hotel-management/role")
 @RestController
 public class RoleController {
 
