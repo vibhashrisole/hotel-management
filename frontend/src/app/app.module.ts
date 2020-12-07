@@ -9,6 +9,7 @@ import { CustomerRegistrationformComponent } from './customer-registrationform/c
 import { RawMaterialComponent } from './raw-material/raw-material.component';
 import { DepartmentComponent } from './department/department.component';
 import { RoleComponent } from './role/role.component';
+import { TypeComponent } from './type/type.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RoleComponent } from './role/role.component';
     CustomerRegistrationformComponent,
     RawMaterialComponent,
     DepartmentComponent,
-    RoleComponent
+    RoleComponent,
+    TypeComponent
   ],
   imports: [
     BrowserModule,

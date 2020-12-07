@@ -1,0 +1,48 @@
+<div class="base-container">
+    <h2 style="text-align: center;">Manage Type data</h2>
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-6">
+          <h3>Type Details</h3>
+          <form #typeForm="ngForm" (ngSubmit)="onAddData(typeForm.value); typeForm.reset()">
+
+            <div class="form-group">
+              <label for="type_name">Type Name</label>
+              <input class="form-control" type="text" id="type_name" name="type_name" placeholder="Enter Name"
+                [(ngModel)]="type.type_name" required>
+            </div>
+  
+            <button type="submit" class="btn btn-primary mr-2">{{ editMode? 'Update Data' : 'Add Data' }}</button>
+  
+          </form>
+        </div>
+  
+        <div class="col-md-6">
+          <h3>Type Information</h3>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let type of Types; index as i">
+                <td>{{ type.type_id }}</td>
+                <td>{{ type.type_name}}</td>
+                <td><a class="text-danger" (click)="onEditData(type.type_id, i)"><i class="fa fa-edit"></i></a></td>
+                <td><a class="text-danger" (click)="onDeleteData(type.type_id)"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+  
+    </div>
+  </div>
