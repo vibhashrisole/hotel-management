@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { RawMaterials } from 'F:/hotel-management/frontend/src/app/shared/class/raw-materials';
+import { RawMaterials } from 'C:/Users/PEC/Documents/Codelab/hotel-management/frontend/src/app/shared/class/raw-materials';
 
 @Component({
   selector: 'app-raw-material',
