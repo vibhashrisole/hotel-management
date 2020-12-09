@@ -7,6 +7,8 @@ export class Table {
     constructor(table_id: string, table_name: string, table_capacity: number, table_status: string){
         this.table_id = table_id;
         this.table_name = table_name;
+        this.table_capacity = table_capacity;
+        this.table_status = table_status;
 
     }
 
