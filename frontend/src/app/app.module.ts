@@ -10,6 +10,7 @@ import { RawMaterialComponent } from './raw-material/raw-material.component';
 import { DepartmentComponent } from './department/department.component';
 import { RoleComponent } from './role/role.component';
 import { TypeComponent } from './type/type.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TypeComponent } from './type/type.component';
     RawMaterialComponent,
     DepartmentComponent,
     RoleComponent,
-    TypeComponent
+    TypeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
