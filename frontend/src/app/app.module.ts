@@ -11,6 +11,7 @@ import { DepartmentComponent } from './department/department.component';
 import { RoleComponent } from './role/role.component';
 import { TypeComponent } from './type/type.component';
 import { TableComponent } from './table/table.component';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TableComponent } from './table/table.component';
     DepartmentComponent,
     RoleComponent,
     TypeComponent,
-    TableComponent
+    TableComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

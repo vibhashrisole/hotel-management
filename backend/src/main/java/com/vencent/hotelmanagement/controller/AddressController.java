@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vencent.hotelmanagement.entity.Address;
 import com.vencent.hotelmanagement.service.AddressService;
 
-@RequestMapping("/address")
+@RequestMapping("/app-hotel-management/address")
 @RestController
 public class AddressController {
 
