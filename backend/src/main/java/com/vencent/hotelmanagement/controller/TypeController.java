@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vencent.hotelmanagement.entity.Type;
 import com.vencent.hotelmanagement.service.TypeService;
 
-@RequestMapping("/type")
+@RequestMapping("/app-hotel-management/type")
 @RestController
 public class TypeController {
 

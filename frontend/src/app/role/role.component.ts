@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Role } from 'F:/hotel-management/frontend/src/app/shared/class/role';
+import { Role } from 'src/app/shared/class/role';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
