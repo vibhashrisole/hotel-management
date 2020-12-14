@@ -18,6 +18,10 @@ import { FooterComponent } from './shared/component/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SettingService } from './shared/service/setting.service';
 
+import { TypeComponent } from './type/type.component';
+import { TableComponent } from './table/table.component';
+import { AddressComponent } from './address/address.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,10 @@ import { SettingService } from './shared/service/setting.service';
     LayoutComponent,
     NavbarComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    TypeComponent,
+    TableComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
