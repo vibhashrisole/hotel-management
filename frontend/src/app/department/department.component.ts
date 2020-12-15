@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Department } from 'C:/Users/PEC/Documents/Codelab/hotel-management/frontend/src/app/shared/class/department';
+import { Department } from 'src/app/shared/class/department';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 

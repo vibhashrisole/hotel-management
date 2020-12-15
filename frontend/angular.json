@@ -24,6 +24,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/custom.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/theme/paper-dashboard.scss",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,6 +1,6 @@
 {
-    "/app-hotel-management/*": {
-        "target": "http://localhost:8080",
-        "loglevel": "debug"
-    }
+  "/app-hotel-management/*": {
+    "target": "http://localhost:8080",
+    "loglevel": "debug"
+  }
 }
