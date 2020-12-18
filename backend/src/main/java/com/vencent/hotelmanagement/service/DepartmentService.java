@@ -35,8 +35,8 @@ public class DepartmentService {
 	}
 	
 	public Department updateDepartment(Department d) {
-		Department existingDepartment=deptRepo.findById(d.getDept_id()).orElse(null);
-		existingDepartment.setDept_name(d.getDept_name());
+		Department existingDepartment=deptRepo.findById(d.getDeptId()).orElse(null);
+		existingDepartment.setDeptName(d.getDeptName());
 		return deptRepo.save(existingDepartment);
 	}
 	

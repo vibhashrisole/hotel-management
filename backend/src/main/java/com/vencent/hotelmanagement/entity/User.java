@@ -3,6 +3,8 @@ package com.vencent.hotelmanagement.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
@@ -17,36 +19,39 @@ public class User {
 
 	@Id
 	@GeneratedValue
-	private int user_id;
+	@Column(name="user_id")
+	private int userId;
 	
-	private String user_name;
+	@Column(name="user_name")
+	private String userName;
 	
-	private String user_pass;
+	@Column(name="user_pass")
+	private String userPass;
 	
 	private int status;
 
-	public int getUser_id() {
-		return user_id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public String getUser_pass() {
-		return user_pass;
+	public String getUserPass() {
+		return userPass;
 	}
 
-	public void setUser_pass(String user_pass) {
-		this.user_pass = user_pass;
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
 	}
 
 	public int getStatus() {
@@ -57,7 +62,6 @@ public class User {
 		this.status = status;
 	}
 
-	
 }
 
 

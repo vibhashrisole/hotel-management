@@ -36,8 +36,8 @@ public class UserService {
 	}
 	
 	public User updateUser(User d) {
-		User existinguser=userRepo.findById(d.getUser_id()).orElse(null);
-		existinguser.setUser_name(d.getUser_name());
+		User existinguser=userRepo.findById(d.getUserId()).orElse(null);
+		existinguser.setUserName(d.getUserName());
 		return userRepo.save(existinguser);
 	}
 	
