@@ -32,8 +32,8 @@ public class TypeService {
 	}
 	
 	public Type updateType(Type t) {
-		Type existingType=typeRepo.findById(t.getType_id()).orElse(null);
-		existingType.setType_name(t.getType_name());
+		Type existingType=typeRepo.findById(t.getTypeId()).orElse(null);
+		existingType.setTypeName(t.getTypeName());
 		return typeRepo.save(existingType);
 	}
 	

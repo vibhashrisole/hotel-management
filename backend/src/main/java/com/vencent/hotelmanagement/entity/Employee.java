@@ -1,8 +1,13 @@
 package com.vencent.hotelmanagement.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -19,26 +24,57 @@ public class Employee {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	@Column(name="emp_id")
+	private int empId;
 	
 	private String name;
 	
 	private String mobileNo;
 
-	private int address;
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name = "address", nullable = false)
+	private Address address;
 	
 	private String email;
 	
-	private int department;
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name = "department", nullable = false)
+	private Department department;//department_id
 	
-	private int type;
-
-	public int getId() {
-		return id;
+	private int status;
+	
+	private double salary;
+	
+	public double getSalary() {
+		return salary;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name = "user", nullable = false)
+	private User user; //user_id
+	
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name = "role_id", nullable = false)
+	private Role role;//role_id
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	
+	public Role getRole() {
+		return role;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
 	}
 
 	public String getName() {
@@ -57,11 +93,11 @@ public class Employee {
 		this.mobileNo = mobileNo;
 	}
 
-	public int getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(int address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
@@ -73,20 +109,28 @@ public class Employee {
 		this.email = email;
 	}
 
-	public int getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
 
-	public void setDepartment(int department) {
+	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	public int getProfile() {
-		return type;
+	public int getStatus() {
+		return status;
 	}
 
-	public void setProfile(int profile) {
-		this.type = profile;
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }

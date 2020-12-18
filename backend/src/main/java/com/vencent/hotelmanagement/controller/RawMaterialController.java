@@ -43,10 +43,10 @@ public class RawMaterialController {
 		return service.getMaterialById(id);	
 	}
 	
-	@GetMapping("/{name}")
+	/*@GetMapping("/{name}")
 	public RawMaterial findMaterialByName(@PathVariable String name) {
 		return service.getMaterialByName(name);	
-	}
+	}*/
 	
 	@PutMapping("")
 	public RawMaterial updateMaterial(@RequestBody  RawMaterial v) {
@@ -58,9 +58,9 @@ public class RawMaterialController {
 		return service.deleteMaterial(id);
 	}
 	
-	@DeleteMapping("/deleteName/{name}")
+	/*@DeleteMapping("/deleteName/{name}")
 	public String deleteMaterial(@PathVariable String name) {
 		return service.deleteMaterialByName(name);
-	}
+	}*/
 	
 }

@@ -32,14 +32,14 @@ public class AddressService {
 	}
 	
 	public Address updateAddress(Address d) {
-		Address existingAddress=addressRepo.findById(d.getAddress_id()).orElse(null);
-		existingAddress.setLine_1(d.getLine_1());
-		existingAddress.setLine_2(d.getLine_2());
+		Address existingAddress=addressRepo.findById(d.getAddressId()).orElse(null);
+		existingAddress.setLine1(d.getLine1());
+		existingAddress.setLine2(d.getLine2());
 		existingAddress.setCity(d.getCity());
 		existingAddress.setState(d.getState());
 		existingAddress.setCountry(d.getCountry());
-		existingAddress.setPin_code(d.getPin_code());
-		existingAddress.setType(d.getType());	
+		existingAddress.setPinCode(d.getPinCode());
+		existingAddress.setType(d.getType());
 		return addressRepo.save(existingAddress);
 	}
 	

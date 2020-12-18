@@ -3,6 +3,8 @@ package com.vencent.hotelmanagement.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -17,24 +19,26 @@ public class Department {
 
 	@Id
 	@GeneratedValue
-	private int dept_id;
+	@Column(name="dept_id")
+	private int deptId;
 	
-	private String dept_name;
-	
-	public int getDept_id() {
-		return dept_id;
+	@Column(name="dept_name")
+	private String deptName;
+
+	public int getDeptId() {
+		return deptId;
 	}
-	
-	public void setDept_id(int dept_id) {
-		this.dept_id = dept_id;
+
+	public void setDeptId(int deptId) {
+		this.deptId = deptId;
 	}
-	
-	public String getDept_name() {
-		return dept_name;
+
+	public String getDeptName() {
+		return deptName;
 	}
-	
-	public void setDept_name(String dept_name) {
-		this.dept_name = dept_name;
+
+	public void setDeptName(String deptName) {
+		this.deptName = deptName;
 	}
 	
 }

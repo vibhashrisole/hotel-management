@@ -1,0 +1,35 @@
+{
+    "empId": 1,
+    "name": "tejas Kale",
+    "mobileNo": "8600237474",
+    "address": {
+        "addressId": 2,
+        "line1": "C2 302",
+        "line2": "Latis Society",
+        "city": "Talegaon Dabhade",
+        "pinCode": 410507,
+        "country": "India",
+        "state": "MH",
+        "type": {
+            "typeId": 3,
+            "typeName": "Corresponding"
+        }
+    },
+    "salary":6000000,
+    "email": "tejask648mail.com",
+    "department": {
+        "deptId": 4,
+        "deptName": "Management"
+    },
+    "status": 1,
+    "user": {
+        "userId": 6,
+        "userName": "tejas648",
+        "userPass": "no_pass",
+        "status": 1
+    },
+    "role": {
+        "roleId": 5,
+        "roleName": "Co-Owner"
+    }
+}

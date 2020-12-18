@@ -35,13 +35,16 @@ public class EmployeeService {
 		}
 		
 		public Employee updateData(Employee e) {
-			Employee existingData=empRepo.findById(e.getId()).orElse(null);
+			Employee existingData=empRepo.findById(e.getEmpId()).orElse(null);
 			existingData.setName(e.getName());
 			existingData.setMobileNo(e.getMobileNo());
 			existingData.setAddress(e.getAddress());
 			existingData.setEmail(e.getEmail());
 			existingData.setDepartment(e.getDepartment());
-			existingData.setProfile(e.getProfile());
+			existingData.setRole(e.getRole());
+			existingData.setStatus(e.getStatus());
+			existingData.setUser(e.getUser());
+			existingData.setSalary(e.getSalary());
 			return empRepo.save(existingData);
 		}
 		
