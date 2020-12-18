@@ -1,5 +1,6 @@
 package com.vencent.hotelmanagement.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,24 +19,27 @@ public class Type {
 
 	@Id
 	@GeneratedValue
-	private Integer type_id;
+	@Column(name="type_id")
+	private Integer typeId;
 	
-	private String type_name;
+	@Column(name="type_name")
+	private String typeName;
+
+	public Integer getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(Integer typeId) {
+		this.typeId = typeId;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 	
-	public int getType_id() {
-		return type_id;
-	}
-
-	public void setType_id(int type_id) {
-		this.type_id = type_id;
-	}
-
-	public String getType_name() {
-		return type_name;
-	}
-
-	public void setType_name(String type_name) {
-		this.type_name = type_name;
-	}
 
 }

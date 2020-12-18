@@ -6,6 +6,6 @@ import com.vencent.hotelmanagement.entity.RawMaterial;
 
 public interface RawMaterialRepository extends JpaRepository<RawMaterial,Integer>{
 
-	RawMaterial findByName(String name);
+	//RawMaterial findByName(String name);
 
 }

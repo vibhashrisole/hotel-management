@@ -1,5 +1,6 @@
 package com.vencent.hotelmanagement.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,44 +19,48 @@ public class RawMaterial {
 	
 	@Id
 	@GeneratedValue
-	private int id;
+	@Column(name="raw_id")
+	private int rawMaterialId;
 	
-	private String name;
+	@Column(name="raw_material_name")
+	private String rawMaterialName;
 	
-	private double price;
+	@Column(name="raw_material_price")
+	private double rawMaterialPrice;
 	
-	private double quantity;
+	@Column(name="raw_material_quantity")
+	private double rawMaterialQuantity;
 	
 	public int getId() {
-		return id;
+		return rawMaterialId;
 	}
 	
 	public void setId(int id) {
-		this.id = id;
+		this.rawMaterialId = id;
 	}
 	
 	public String getName() {
-		return name;
+		return rawMaterialName;
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		this.rawMaterialName = name;
 	}
 	
 	public double getPrice() {
-		return price;
+		return rawMaterialPrice;
 	}
 	
 	public void setPrice(double price) {
-		this.price = price;
+		this.rawMaterialPrice = price;
 	}
 	
 	public double getQuantity() {
-		return quantity;
+		return rawMaterialQuantity;
 	}
 	
 	public void setQuantity(double quantity) {
-		this.quantity = quantity;
+		this.rawMaterialQuantity = quantity;
 	}
 	
 }

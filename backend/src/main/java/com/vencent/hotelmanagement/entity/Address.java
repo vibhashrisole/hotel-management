@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,58 +23,50 @@ public class Address {
 
 	@Id
 	@GeneratedValue
-	private int address_id;
+	@Column(name="address_id")
+	private int addressId;
 	
-	private String line_1;
+	@Column(name="line_1")
+	private String line1;
 	
-	private String line_2;
+	@Column(name="line_2")
+	private String line2;
 	
 	private String city;
 	
-	private int pin_code;
+	@Column(name="pin_code")
+	private int pinCode;
 	
 	private String country;
 	
 	private String state;
 	
-	@OneToOne(targetEntity = Type.class,fetch = FetchType.EAGER)
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name = "type_id", nullable = false)
 	private Type type;
-	
-	public Type getType() {
-		return type;
+
+	public int getAddressId() {
+		return addressId;
 	}
 
-	public void setType(Type type) {
-		this.type = type;
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
 	}
 
-	public String getState() {
-		return state;
+	public String getLine1() {
+		return line1;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setLine1(String line1) {
+		this.line1 = line1;
 	}
 
-	public int getAddress_id() {
-		return address_id;
+	public String getLine2() {
+		return line2;
 	}
 
-	public String getLine_1() {
-		return line_1;
-	}
-
-	public void setLine_1(String line_1) {
-		this.line_1 = line_1;
-	}
-
-	public String getLine_2() {
-		return line_2;
-	}
-
-	public void setLine_2(String line_2) {
-		this.line_2 = line_2;
+	public void setLine2(String line2) {
+		this.line2 = line2;
 	}
 
 	public String getCity() {
@@ -83,12 +77,12 @@ public class Address {
 		this.city = city;
 	}
 
-	public int getPin_code() {
-		return pin_code;
+	public int getPinCode() {
+		return pinCode;
 	}
 
-	public void setPin_code(int pin_code) {
-		this.pin_code = pin_code;
+	public void setPinCode(int pinCode) {
+		this.pinCode = pinCode;
 	}
 
 	public String getCountry() {
@@ -98,6 +92,24 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public Type getType() {
+		return type;
+	}
+
+	public void setType(Type type) {
+		this.type = type;
+	}
+	
+	
 	
 }
 

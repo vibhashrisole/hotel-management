@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vencent.hotelmanagement.entity.Employee;
 import com.vencent.hotelmanagement.service.EmployeeService;
 
-@RequestMapping("/employee")
+@RequestMapping("/app-hotel-management/employee")
 @RestController
 public class EmployeeController {
 

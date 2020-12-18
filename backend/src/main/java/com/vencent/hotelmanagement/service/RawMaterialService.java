@@ -34,23 +34,15 @@ public class RawMaterialService {
 		return repo.findById(id).orElse(null);
 	}
 	
-	//Get material by name
+	/*/Get material by name
 	public RawMaterial getMaterialByName(String name){
 		return repo.findByName(name);
-	}
+	}*/
 	
 	//for delete
 	public String deleteMaterial(int id) {
 		repo.deleteById(id);
 		return "Vegetable Removed with: "+id;
-	}
-	
-	//deleting by name
-	public String deleteMaterialByName(String name) {
-		RawMaterial existingVegetable=repo.findByName(name);
-		int temp_id=existingVegetable.getId();
-		repo.deleteById(temp_id);
-		return null;
 	}
 	
 	//updating material fields
