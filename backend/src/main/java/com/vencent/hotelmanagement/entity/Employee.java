@@ -61,6 +61,7 @@ public class Employee {
 	@JoinColumn(name = "role_id", nullable = false)
 	private Role role;//role_id
 
+	
 	public void setRole(Role role) {
 		this.role = role;
 	}
